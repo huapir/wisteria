@@ -1,0 +1,11 @@
+wisteria:
+  modules:
+    basePackages: org.wisteria.zk
+  app:
+    basePackage: org.wisteria.zk
+
+spring:
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp

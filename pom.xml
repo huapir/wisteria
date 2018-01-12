@@ -9,5 +9,7 @@
 
     <modules>
         <module>wisteria-core</module>
+        <module>../wxe/wxr-platform</module>
+        <module>wisteria-zk</module>
     </modules>
 </project>
