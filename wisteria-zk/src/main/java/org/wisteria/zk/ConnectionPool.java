@@ -16,8 +16,14 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ConnectionPool {
     private static Map<String, ConnectionDTO> connections = new ConcurrentHashMap<String, ConnectionDTO>();
 
+    public static ZooKeeper getConnectionZk(String key) {
+        ConnectionDTO connection = connections.get(key);
+        return connection != null ? connection.getZk() : null;
+    }
+
     public static ConnectionDTO getConnection(String connectString) {
-        return connections.get(connectString);
+        ConnectionDTO connection = connections.get(connectString);
+        return connection;
     }
 
     public static String createConnection(String connectString) {
