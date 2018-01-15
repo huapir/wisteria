@@ -10,8 +10,10 @@ import java.io.Serializable;
  */
 public class ConnectionDTO implements Serializable {
 
+    private static final long serialVersionUID = 2992419091340602316L;
+
     private String connectString;
-    private ZooKeeper zk;
+
 
     public String getConnectString() {
         return connectString;
@@ -21,11 +23,4 @@ public class ConnectionDTO implements Serializable {
         this.connectString = connectString;
     }
 
-    public ZooKeeper getZk() {
-        return zk;
-    }
-
-    public void setZk(ZooKeeper zk) {
-        this.zk = zk;
-    }
 }

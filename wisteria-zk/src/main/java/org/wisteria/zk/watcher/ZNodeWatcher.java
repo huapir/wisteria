@@ -1,4 +1,4 @@
-package org.wisteria.zk.service;
+package org.wisteria.zk.watcher;
 
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;

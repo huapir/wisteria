@@ -11,5 +11,7 @@
         <module>wisteria-core</module>
         <module>../wxe/wxr-platform</module>
         <module>wisteria-zk</module>
+        <module>wisteria-web</module>
+        <module>wisteria-web</module>
     </modules>
 </project>

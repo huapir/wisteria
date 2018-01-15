@@ -1,8 +1,8 @@
 package org.wisteria.zk;
 
 import org.apache.zookeeper.ZooKeeper;
-import org.wisteria.zk.dto.ConnectionDTO;
-import org.wisteria.zk.service.ZNodeWatcher;
+import org.wisteria.zk.dto.ZKConnectionDTO;
+import org.wisteria.zk.watcher.ZNodeWatcher;
 
 import java.io.IOException;
 import java.util.Map;
@@ -14,15 +14,15 @@ import java.util.concurrent.ConcurrentHashMap;
  * @create
  */
 public class ConnectionPool {
-    private static Map<String, ConnectionDTO> connections = new ConcurrentHashMap<String, ConnectionDTO>();
+    private static Map<String, ZKConnectionDTO> connections = new ConcurrentHashMap<String, ZKConnectionDTO>();
 
     public static ZooKeeper getConnectionZk(String key) {
-        ConnectionDTO connection = connections.get(key);
+        ZKConnectionDTO connection = connections.get(key);
         return connection != null ? connection.getZk() : null;
     }
 
-    public static ConnectionDTO getConnection(String connectString) {
-        ConnectionDTO connection = connections.get(connectString);
+    public static ZKConnectionDTO getConnection(String connectString) {
+        ZKConnectionDTO connection = connections.get(connectString);
         return connection;
     }
 
@@ -37,7 +37,7 @@ public class ConnectionPool {
         }
         if (zk != null) {
             key = UUID.randomUUID().toString();
-            ConnectionDTO connection = new ConnectionDTO();
+            ZKConnectionDTO connection = new ZKConnectionDTO();
             connection.setConnectString(connectString);
             connection.setZk(zk);
 
