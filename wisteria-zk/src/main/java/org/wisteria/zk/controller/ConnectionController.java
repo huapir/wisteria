@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.wisteria.web.APIResult;
-import org.wisteria.zk.ConnectionPool;
+import org.wisteria.zk.util.ConnectionPool;
 import org.wisteria.zk.dto.ConnectionDTO;
 
 /**

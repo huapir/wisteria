@@ -1,4 +1,4 @@
-package org.wisteria.zk;
+package org.wisteria.zk.util;
 
 import org.apache.zookeeper.ZooKeeper;
 import org.wisteria.zk.dto.ZKConnectionDTO;
