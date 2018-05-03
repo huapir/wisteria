@@ -1,0 +1,17 @@
+.site-block{padding: 15px 0;}
+.light-form .l-f-item{clear: both;}
+.light-form .l-f-label{padding: 5px 2px;font-size:12px;width:70px;}
+.light-form .l-f-inupt{height:32px;width:120px;font-size:12px;}
+.light-form .l-f-inupt-w3{width:460px;}
+.light-form .l-f-btn{height:30px;width:40px;font-size:12px;}
+.light-form .l-f-inupt-block{min-height:32px;margin-left:80px;}
+.grid-toolbar{
+   height: 44px;
+   line-height: 44px;
+   padding-left: 15px;
+   padding-right: 15px;
+   border-left: 1px solid #dde7e9;
+   border-right: 1px solid #dde7e9;
+   border-top: 1px solid #dee5e7;
+   }
+.layui-table, .layui-table-view{margin:0;}
